@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro geral</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"	type="text/css" href="css/reset.css">
+  </head>
+  <body>
+    <div><br><br></div>
+    <div><br><br></div>
+    <div class="row">
+        <div class="col-sm-12 text-center" >
+            <img src="img/cadastrogeralicon.jpeg" class="float-center" style="width:350px;"  >
+        </div>
+    </div>
+    <div><br><br></div>
+    <form action="insert.php" method="post" style="padding-left:100px;">
+    <div class="form-group row">
+        <label for="nome" class="col-sm-2 col-form-label">Nome completo:</label>
+        <div class="col-sm-6">
+        <input type="text" class="form-control" id="nome" name="nome">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="nasc" class="col-sm-2 col-form-label">Data de nascimento:</label>
+        <div class="col-sm-6">
+        <input type="date" class="form-control" id="nasc">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="cpf" class="col-sm-2 col-form-label">CPF:</label>
+        <div class="col-sm-6">
+        <input type="number" class="form-control" id="cpf">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="matricula" class="col-sm-2 col-form-label">Matricula:</label>
+        <div class="col-sm-6">
+        <input type="number" class="form-control" id="matricula">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="idfunc" class="col-sm-2 col-form-label">ID Funcional:</label>
+        <div class="col-sm-6">
+        <input type="number" class="form-control" id="idfunc">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="formacad" class="col-sm-2 col-form-label">Formação acadêmica:</label>
+        <div class="col-sm-6">
+            <select name="formacad" class="custom-select-sm">
+                <option selected>Selecione sua formação</option>
+                <option value="enssup">Ensino Superior</option>
+                <option value="mest">Mestrado</option>
+                <option value="dout">Doutorado</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="lotacao" class="col-sm-2 col-form-label">Lotação:</label>
+        <div class="col-sm-6">
+            <select name="lotacao" class="custom-select-sm">
+                <option selected>Selecione sua Lotação</option>
+                <option value="camp1">Campus 1</option>
+                <option value="camp2">Campus 2</option>
+                <option value="camp3">Campus 3</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="cargo" class="col-sm-2 col-form-label">Cargo:</label>
+        <div class="col-sm-6">
+            <select name="cargo" class="custom-select-sm">
+                <option selected>Selecione seu cargo</option>
+                <option value="coord">Coordenador</option>
+                <option value="pesq">Pesquisador</option>
+                <option value="prof">Professor</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="funcao" class="col-sm-2 col-form-label">Função:</label>
+        <div class="col-sm-6">
+            <select name="funcao" class="custom-select-sm">
+                <option selected>Selecione sua função</option>
+                <option value="prof">Professor</option>
+                <option value="aluno">Aluno</option>
+                <option value="diretor">Diretor</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" style="padding: 1px;"><img src="img/enviar.jpeg " style="width:75px;"/></button>
+    </form>
+  </body>
+</html>  
