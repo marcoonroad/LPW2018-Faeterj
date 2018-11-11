@@ -1,18 +1,21 @@
 <?php
-
 class Conexao {
-   private $usuario = "root";
-    private $senha = "";
-    private $caminho = "localhost";
-    private $banco = "login";
-    private $con;
+	private $servername = "localhost";
+	private $username = "u241162422_root";
+	private $password = "lpw20182";
+	private $dbname = "u241162422_lpw";
+	private $con;
 
     public function __construct() {
-        $this->con = mysqli_connect($this->caminho, $this->usuario, $this->senha,$this->banco) or die("Conexão com o banco de dados Falhou!" . mysqli_error($this->con));
-    }
-
+		try{
+		$con = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+		// Set the PDO error mode to exception
+		$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		} catch(PDOException $e){
+			die("ERRO: Não foi possível conectar. " . $e->getMessage());
+		}
+	}
     public function getCon() {
         return $this->con;
     }
-
 }
