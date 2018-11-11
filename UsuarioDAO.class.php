@@ -1,5 +1,5 @@
 <?php
-require 'C:/xampp/htdocs/login/Conexao.class.php';
+require 'seu caminho aqui! /Conexao.class.php';
 class UsuarioDAO {
     
     private $conexao;
@@ -10,13 +10,12 @@ class UsuarioDAO {
 
     public function login($senha, $login) {
 
-
         $sql = "SELECT * FROM usuario WHERE login = '$login' AND senha = '$senha'";
 
+        $result = $conexao->query( $sql );
+        $rows = $result->fetchAll();
 
-        $executa = mysqli_query($this->conexao->getCon(), $sql);
-
-        if (mysqli_num_rows($executa) > 0) {
+        if ($rows > 0) {
             return true;
         } else {
             return false;
