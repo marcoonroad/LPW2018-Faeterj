@@ -12,8 +12,6 @@ if (!(isset($_SESSION['login']))) {
         <meta charset="UTF-8">
         <title>Pagina Principal</title>
     </head>
-
-    <link rel="stylesheet" href="stylePrincipal.css">
     <body>
             <h1> Página Principal.php</h1> <h2>Olá, <?php echo $_SESSION['login'];?></h2>
             <h2><a href="logout.php">Sair</a></h2>
