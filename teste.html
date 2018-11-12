@@ -9,7 +9,7 @@
     <meta name="author" content="">
 	<link rel="shortcut icon" href="img/favicon.jpg" />
 
-    <title>Cadastro Geral</title>
+    <title>Unifaetec</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,58 +33,56 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
 	 <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.php">Unifaetec</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Unifaetec</a>
 		
 		 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
         </button>
 		
-		<!-- Menu 1 -->
 		<div class="dropdown">
 		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			Administrativo
 		  </button>
 		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			<a class="dropdown-item" href="#">Usuário</a>
+			<a class="dropdown-item" href="#">Opção 1</a>
+			<a class="dropdown-item" href="#">Opção 2</a>
+			<a class="dropdown-item" href="#">Opção 3</a>
 		  </div>
 		</div>
-		<!-- Fim -->
 		
-		<!-- Menu 2 -->
 		<div class="dropdown">
 		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			Atividades
 		  </button>
 		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			<a class="dropdown-item" href="cadastroeventext.html">Confirmar Presença</a>
+			<a class="dropdown-item" href="#">Opção 1</a>
+			<a class="dropdown-item" href="#">Opção 2</a>
+			<a class="dropdown-item" href="#">Opção 3</a>
 		  </div>
 		</div>
-		<!-- Fim -->
 		
-		<!-- Menu 3 -->
 		<div class="dropdown">
 		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			Documentos
 		  </button>
 		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			<a class="dropdown-item" href="#">Solicitar</a>
+			<a class="dropdown-item" href="#">Opção 1</a>
+			<a class="dropdown-item" href="#">Opção 2</a>
+			<a class="dropdown-item" href="#">Opção 3</a>
 		  </div>
 		</div>
-		<!-- Fim -->
 		
-		<!-- Menu 4 -->
 		<div class="dropdown">
 		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			Estatística
 		  </button>
 		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			<a class="dropdown-item" href="#">Atendimento</a>
-			<a class="dropdown-item" href="cadastroeventext.html">Eventos</a>
-			<a class="dropdown-item" href="cadastrotrabacad.html">Trabalhos</a>
+			<a class="dropdown-item" href="#">Opção 1</a>
+			<a class="dropdown-item" href="#">Opção 2</a>
+			<a class="dropdown-item" href="#">Opção 3</a>
 		  </div>
 		</div>
-		<!-- Fim -->
 			
      </div>
     </nav> 
@@ -94,130 +92,38 @@
     <section id="Corpo">
       <div class="container">
 	  <br>
-        <h3 class="text-center text-uppercase text-secondary mb-0">Cadastro Geral</h3>
+        <h3 class="text-center text-uppercase text-secondary mb-0">Login</h3>
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-lg-8 mx-auto">
             
-			<!-- Início form -->
-            <form action="insert.php" method="post" novalidate="novalidate">
+			<!-- Início form-->
+            <form action="/action_page.php" name="sentMessage" id="contactForm" novalidate="novalidate">
 			
               <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label for="nome">Nome Completo</label>
-                  <input class="form-control" id="nome" name="nome" type="text" placeholder="Nome Completo" required="required" data-validation-required-message="Preencha o campo.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-			  
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label for="nasc">Data de Nascimento</label>
-                  <input class="form-control" id="nasc" name="nasc" type="date" required="required" data-validation-required-message="Preencha o campo.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-			  
-			  <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label for="cpf">CPF</label>
-                  <input class="form-control" id="cpf" name="cpf" type="number" placeholder="CPF" required="required" data-validation-required-message="Preencha o campo.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-			  
-			  <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label for="matricula">Matrícula</label>
-                  <input class="form-control" id="matricula" name="matricula" type="number" placeholder="Matrícula" required="required" data-validation-required-message="Preencha o campo.">
+                  <input class="form-control" id="matricula" type="number" placeholder="Matrícula" required="required" data-validation-required-message="Preencha o campo.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
 			  
-			  <div class="control-group">
+              <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label for="idfunc">ID Funcional</label>
-                  <input class="form-control" id="idfunc" name="idfunc" type="number" placeholder="ID Funcional" required="required" data-validation-required-message="Preencha o campo.">
+                  <label for="senha">Senha</label>
+                  <input class="form-control" id="senha" type="password" placeholder="Senha" required="required" data-validation-required-message="Preencha o campo.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
-			  
-			  <br>
-			  
-			  <div class="control-group">
-				<div class="form-group floating-label-form-group controls mb-0 pb-2">
-               	<label for="formacad">Formação acadêmica</label>
-                  	<select name="formacad" class="form-control">
-						<option selected>Selecione sua formação</option>
-						<option value="ensfund">Ensino Fundamental</option>
-						<option value="ensmed">Ensino médio</option>
-						<option value="grad">Graduação</option>
-						<option value="espec">Especialização</option>
-						<option value="mest">Mestrado</option>
-						<option value="dout">Doutorado</option>
-					</select>
-				</div>
-              </div>
-			  
-			  <br>
-			  
-			  <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-				<label for="lotacao"> Lotação</label>
-					<select name="lotacao" class="form-control">
-						<option selected>Selecione sua Lotação</option>
-						<option value="ISERJ">ISERJ</option>
-						<option value="ISEPAM">ISEPAM</option>
-						<option value="FAETERJ RIO">FAETERJ RIO</option>
-						<option value="FAETERJ PETRÓPOLIS">FAETERJ PETRÓPOLIS</option>
-						<option value="FAETERJ PARACAMBI-SI">FAETERJ PARACAMBI-SI</option>
-						<option value="FAETERJ PARACAMBI GESTÃO AMBIENTAL">FAETERJ PARACAMBI GESTÃO AMBIENTAL</option>
-						<option value="FAETERJ CAXIAS">FAETERJ CAXIAS</option>
-						<option value=">EEEF Agricola Antônio Sarlo">EEEF Agricola Antônio Sarlo</option>
-						<option value="EEEF República">EEEF República</option>
-						<option value="EEEF Visconde de Mauá">EEEF Visconde de Mauá</option>
-						<option value="EEEF Henrique Laje">EEEF Henrique Laje</option>
-					</select>
-                </div>
-			  </div>
-			  
-			  <br>
-			  
-			<div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-				<label for="cargo">Cargo</label>
-					<select name="cargo" class="form-control">
-						<option selected>Selecione seu cargo</option>
-						<option value="adm">Administrativo</option>
-						<option value="tecespe">Técnico Especialista</option>
-						<option value="docente">Docente</option>
-					</select>
-                </div>
-			</div>
-
-			<br>
-			
-			<div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-				<label for="funcao">Função</label>
-					<select name="funcao" class="form-control">
-						<option selected>Selecione sua função</option>
-						<option value="docente">Docente</option>
-						<option value="pesqs">Pesquisador</option>
-						<option value="adm">Administrativa</option>
-					</select>
-                </div>
-			</div>
-
-			  
+			  			  
               <br>
-			  
               <div id="success"></div>
-			  
               <div class="form-group">
-			  
-                <button type="submit" class="btn btn-primary btn-xl">Cadastrar</button>
+                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Entrar</button>
 				
+				<a href="cadastrogeral.html">
+				<button type="button" class="btn btn-primary btn-xl" id="sendMessageButton">Cadastro Geral</button>
+				</a>
               </div>
             </form>
 			<!-- Fim form -->
@@ -226,7 +132,7 @@
         </div>
       </div>
     </section>
-   
+   <!-- FIM Corpo Section -->
 
     <!-- Footer -->
     <footer class="footer text-center">

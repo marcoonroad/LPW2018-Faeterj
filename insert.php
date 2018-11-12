@@ -3,23 +3,20 @@ $servername = "localhost";
 $username = "u241162422_root";
 $password = "lpw20182";
 $dbname = "u241162422_lpw";
-
-try{
+    
+    try{
     $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // Set the PDO error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e){
-    die("ERRO: Não foi possível conectar. " . $e->getMessage());
-}
- 
-// Attempt insert query execution
+        } catch(PDOException $e){
+        die("ERRO: Não foi possível conectar. " . $e->getMessage());
+    }
+
 try{
     // Create prepared statement
-    $sql = "INSERT INTO servidor (nome, data_nascimento, cpf, matricula, id_funcional, formacao_academica, lotacao, cargo, funcao) 
-			VALUES (:nome, :data_nascimento, :cpf, :matricula, :id_funcional, :formacao_academica, :lotacao, :cargo, :funcao)";
+    $sql = "INSERT INTO usuario (nome, data_nascimento, cpf, matricula, id_funcional, formacaoAcademica, lotacao, cargo, funcao) 
+			VALUES (:nome, :data_nascimento, :cpf, :matricula, :id_funcional, :formacaoAcademica, :lotacao, :cargo, :funcao)";
     $stmt = $pdo->prepare($sql);
-    
-    echo "nome: ".$_POST['nome']."<br>";
     
     // Bind parameters to statement
     $stmt->bindParam(':nome', $_REQUEST['nome']);
@@ -27,7 +24,7 @@ try{
     $stmt->bindParam(':cpf', $_REQUEST['cpf']);
     $stmt->bindParam(':matricula', $_REQUEST['matricula']);
 	$stmt->bindParam(':id_funcional', $_REQUEST['idfunc']);
-	$stmt->bindParam(':formacao_academica', $_REQUEST['formacad']);
+	$stmt->bindParam(':formacaoAcademica', $_REQUEST['formacad']);
 	$stmt->bindParam(':lotacao', $_REQUEST['lotacao']);
 	$stmt->bindParam(':cargo', $_REQUEST['cargo']);
 	$stmt->bindParam(':funcao', $_REQUEST['funcao']);

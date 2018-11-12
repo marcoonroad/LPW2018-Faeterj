@@ -1,3 +1,4 @@
+
 <?php
 class Conexao {
 	private $servername = "localhost";
@@ -5,12 +6,13 @@ class Conexao {
 	private $password = "lpw20182";
 	private $dbname = "u241162422_lpw";
 	private $con;
-
     public function __construct() {
 		try{
-		$con = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+		$this->con = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->dbname,
+		  $this->username,
+			$this->password);
 		// Set the PDO error mode to exception
-		$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		} catch(PDOException $e){
 			die("ERRO: Não foi possível conectar. " . $e->getMessage());
 		}
