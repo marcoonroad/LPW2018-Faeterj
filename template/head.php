@@ -4,8 +4,6 @@
 <meta name="author" content="">
 <link rel="shortcut icon" href="img/favicon.jpg" />
 
-<title>Unifaetec</title>
-
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 

@@ -3,6 +3,7 @@
 <head>
 
   <?php include './template/head.php'; ?>
+  <title>Consulta de Servidores</title>
 
   <style>
   table.consulta {

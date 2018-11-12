@@ -1,9 +1,7 @@
-
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
 	 <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.html">Unifaetec</a>
+        <a class="navbar-brand js-scroll-trigger" href="index.php">Unifaetec</a>
 
 		 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
@@ -53,7 +51,17 @@
 			<a class="dropdown-item" href="#">Atendimento</a>
 			<a class="dropdown-item" href="cadastroeventext.html">Eventos</a>
 			<a class="dropdown-item" href="cadastrotrabacad.html">Trabalhos</a>
-      <a class="dropdown-item" href="consulta-servidores.php">Consulta de servidores</a>
+		  </div>
+		</div>
+		<!-- Fim -->
+
+    <!-- Menu 5 -->
+		<div class="dropdown">
+		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Consulta
+		  </button>
+		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="consulta-servidores.php">Servidores</a>
 		  </div>
 		</div>
 		<!-- Fim -->
