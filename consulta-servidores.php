@@ -24,11 +24,14 @@ error_reporting(E_ALL|E_STRICT);
 
 require './Conexao.class.php';
 
+$offset = intval($_GET['offset']);
+$offset = $offset < 0 ? 0 : $offset;
+
 $object = new Conexao();
 $pdo = $object -> getCon();
 
 $stmt = $pdo->query(
-  'SELECT * FROM servidor LIMIT 20'
+  "SELECT * FROM servidor LIMIT 20 OFFSET $offset"
 );
 ?>
 
@@ -80,6 +83,36 @@ for ($rowIndex = $counter; $rowIndex < 5; $rowIndex += 1) {
 
 ?>
 </table>
+</div>
+
+<hr/>
+
+<div class="paging-wrapper">
+  <form class="middle-form"></form>
+<?php
+if ($offset !== 0) {
+?>
+  <form method="get" action="consulta-servidores.php" class="previous-button">
+    <input type="hidden" name="offset" value="<?php echo max(0, $offset - 20); ?>"/>
+    <center><input type="submit" class="btn btn-dark" value="previous"/></center>
+  </form>
+<?php
+}
+?>
+
+<?php
+if ($counter >= 20) {
+?>
+  <form method="get" action="consulta-servidores.php" class="next-button">
+    <input type="hidden" name="offset" value="<?php echo ($offset + 20); ?>"/>
+    <center><input type="submit" class="btn btn-dark" value="next"/></center>
+  </form>
+<?php
+}
+?>
+<div class="clear-fix-forms"></div>
+</div>
+
 </div>
 
 </div>
