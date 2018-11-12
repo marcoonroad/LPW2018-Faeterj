@@ -3,7 +3,7 @@
 <head>
 
   <?php include './template/head.php'; ?>
-  <title>Consulta de Servidores</title>
+  <title>Consulta de Eventos</title>
 
 </head>
 
@@ -15,7 +15,7 @@
 <div class="container">
 
 <br>
-<h3 class="text-center text-uppercase text-secondary mb-0">Servidores</h3>
+<h3 class="text-center text-uppercase text-secondary mb-0">Eventos</h3>
 <hr class="star-dark mb-5">
 
 <?php
@@ -28,7 +28,7 @@ $object = new Conexao();
 $pdo = $object -> getCon();
 
 $stmt = $pdo->query(
-  'SELECT * FROM servidor LIMIT 20'
+  'SELECT * FROM eventoExterno LIMIT 20'
 );
 ?>
 
@@ -36,12 +36,10 @@ $stmt = $pdo->query(
 <table class="consulta">
 <tr>
   <th>Nome</th>
-  <th>Data de Nascimento</th>
-  <th>CPF</th>
-  <th>Matrícula</th>
-  <th>Formação Acadêmica</th>
-  <th>Cargo</th>
-  <th>Função</th>
+  <th>Endereço</th>
+  <th>Descrição</th>
+  <th>Pré-requisitos</th>
+  <th>Data de realização</th>
 </tr>
 <?php
 $counter = 0;
@@ -51,17 +49,13 @@ echo "<tr>\n" .
 
      "<td>" . $row->nome . "</td>\n" .
 // =============================================================================
-     "<td>" . $row->data_nascimento . "</td>\n" .
+     "<td>" . $row->endereco . "</td>\n" .
 // =============================================================================
-     "<td>" . $row->cpf . "</td>\n" .
+     "<td>" . $row->descricao . "</td>\n" .
 // =============================================================================
-     "<td>" . $row->matricula . "</td>\n" .
+     "<td>" . $row->pre_requisitos . "</td>\n" .
 // =============================================================================
-     "<td>" . $row->formacao_academica . "</td>\n" .
-// =============================================================================
-     "<td>" . $row->cargo . "</td>\n" .
-// =============================================================================
-     "<td>" . $row->funcao . "</td>\n" .
+     "<td>" . $row->data_realizacao . "</td>\n" .
 
      "</tr>\n";
 
@@ -72,7 +66,7 @@ echo "<tr>\n" .
 // cria ao menos 5 linhas de entrada
 for ($rowIndex = $counter; $rowIndex < 5; $rowIndex += 1) {
   echo "<tr>\n";
-  for ($columnIndex = 0; $columnIndex < 7; $columnIndex += 1) {
+  for ($columnIndex = 0; $columnIndex < 5; $columnIndex += 1) {
     echo "<td></td>";
   }
   echo "</tr>\n";

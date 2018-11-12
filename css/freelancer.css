@@ -335,6 +335,31 @@ form .row:first-child .floating-label-form-group {
   background-color: #1a252f;
 }
 
+div.consulta-wrapper {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.consulta-wrapper table.consulta {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+div.consulta-wrapper table.consulta th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+}
+
+div.consulta-wrapper table.consulta td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+}
+
 a {
   color: #18BC9C;
 }
