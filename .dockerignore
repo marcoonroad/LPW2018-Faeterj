@@ -1,0 +1,8 @@
+node_modules/
+.gitignore
+.travis.yml
+LICENSE
+README.md
+package-lock.json
+package.json
+yarn.lock

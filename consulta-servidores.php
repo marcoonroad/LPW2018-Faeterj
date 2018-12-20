@@ -22,8 +22,8 @@
 
 error_reporting(E_ALL|E_STRICT);
 
-require './Conexao.class.php';
-require_once('UsuarioDAO.class.php');
+require_once('./Conexao.class.php');
+require_once('./UsuarioDAO.class.php');
 
 $objLogin = new UsuarioDAO();
 $objLogin->verificarLogado(); // Verifica se o usúário está logado no sistema

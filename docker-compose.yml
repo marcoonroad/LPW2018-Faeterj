@@ -1,0 +1,69 @@
+version: "3.2"
+
+services:
+  server:
+    image: custom-php-apache
+    build: .
+    depends_on:
+      - phpmyadmin
+      - database
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - shared-network
+    environment:
+      - DB_HOSTNAME=database # the name of the service
+    container_name: unifaetec-server
+
+  database:
+    image: mysql
+    networks:
+      - shared-network
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_USER=u241162422_root
+      - MYSQL_PASSWORD=lpw20182
+      - MYSQL_DATABASE=u241162422_lpw
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: unifaetec-database
+    volumes:
+       - ./dump:/docker-entrypoint-initdb.d
+       - persistent:/var/lib/mysql
+
+#  admin:
+#    image: adminer
+#    depends_on:
+#      - database
+#    ports:
+#      - "8080:8080"
+#    networks:
+#      - shared-network
+#    container_name: lpw-admin
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - database
+    networks:
+      - shared-network
+    ports:
+      - "8000:80"
+    environment:
+      - PMA_HOST=database
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_USER=u241162422_root
+      - MYSQL_PASSWORD=lpw20182
+      - MYSQL_DATABASE=u241162422_lpw
+    container_name: unifaetec-phpmyadmin
+
+networks:
+  shared-network:
+
+volumes:
+  persistent:
